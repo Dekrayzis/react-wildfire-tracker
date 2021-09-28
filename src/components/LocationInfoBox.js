@@ -3,7 +3,8 @@ import moment from "moment";
 
 const LocationInfoBox = ({ info }) => {
 
-  const formatDate = () =>  `${moment.parseZone(info.date).format('dddd Do MMM YYYY')} @ ${moment.parseZone(info.date).format('HH:mm:ss')}`
+  const infoDate = moment.parseZone(info.date);
+  const formatDate = () => `${infoDate.format('dddd Do MMM YYYY')} @ ${infoDate.format('HH:mm:ss')}`;
     
   return (
     <div className="location-info">
